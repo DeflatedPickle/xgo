@@ -1,10 +1,7 @@
-#ifndef Version_h
-#define Version_h
+#pragma once
 
 enum Version {
   MINI,
   LITE,
   PRO,
 }
-
-#endif

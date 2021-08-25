@@ -1,10 +1,7 @@
-#ifndef Speed_h
-#define Speed_h
+#pragma once
 
 enum Speed {
   NORMAL,
   SLOW,
   FAST,
 }
-
-#endif

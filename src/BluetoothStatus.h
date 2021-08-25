@@ -1,10 +1,7 @@
-#ifndef BluetoothStatus_h
-#define BluetoothStatus_h
+#pragma once
 
 enum BluetoothStatus {
   NONE,
   DISCONNECTED,
   CONNRECTED,
 }
-
-#endif

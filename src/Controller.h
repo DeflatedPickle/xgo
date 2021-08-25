@@ -1,7 +1,7 @@
-#ifndef Controller_h
-#define Controller_h
+#pragma once
 
 #include "Axis.h"
+#include "Direction.h"
 
 class Controller {
   public:
@@ -9,11 +9,7 @@ class Controller {
 
     /*0x30,0x31*/ int getMovementSpeed(Axis axis);
     
-    /*0x30*/ void walkForward(int speed);
-    /*0x30*/ void walkBackward(int speed);
-    
-    /*0x31*/ void walkLeft(int speed);
-    /*0x31*/ void walkRight(int speed);
+    /*0x30,0x31*/ void walk(Axis axis, Direction direction, int speed);
     
     /*0x32*/ int getRotationSpeed();
     /*0x32*/ void rotateClockwise(int speed);
@@ -46,5 +42,3 @@ class Controller {
     /*0x80,0x81,0x82*/ int getMaxSteppingSpeed(Axis axis);
     /*0x80,0x81,0x82*/ void setMaxSteppingSpeed(Axis axis);
 }
-
-#endif

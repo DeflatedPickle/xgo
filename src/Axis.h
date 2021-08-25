@@ -1,10 +1,7 @@
-#ifndef Axis_h
-#define Axis_h
+#pragma once
 
 enum Axis {
   X,
   Y,
   Z,
 }
-
-#endif

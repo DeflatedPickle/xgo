@@ -1,5 +1,4 @@
-#ifndef Bluetooth_h
-#define Bluetooth_h
+#pragma once
 
 #include "BluetoothStatus.h"
 
@@ -16,5 +15,3 @@ class Bluetooth {
     /*0x13*/ String getName();
     /*0x13*/ void setName(String name);
 }
-
-#endif

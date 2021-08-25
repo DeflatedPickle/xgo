@@ -1,5 +1,4 @@
-#ifndef Action_h
-#define Action_h
+#pragma once
 
 enum Action {
   DEFAULT,
@@ -22,5 +21,3 @@ enum Action {
   BEG,
   SEARCH,
 }
-
-#endif
