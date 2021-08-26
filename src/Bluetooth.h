@@ -1,6 +1,7 @@
 #pragma once
 
-#include "BluetoothStatus.h"
+#include "util/func/BluetoothStatus.h"
+#include "util/enum/send.h"
 
 class Bluetooth {
   public:
@@ -10,8 +11,12 @@ class Bluetooth {
     /*0x11*/ int getBaudRate();
     
     /*0x12*/ int getPassword();
-    /*0x12*/ void setPassword(int password);
+    /*0x12*/ void setPassword(int password) {
+      send(0x12, password);
+    }
     
     /*0x13*/ String getName();
-    /*0x13*/ void setName(String name);
+    /*0x13*/ void setName(String name) {
+      send(0x13, name);
+    }
 }
