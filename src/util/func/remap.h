@@ -1,5 +1,11 @@
 #pragma once
 
-int remap(value, oldLow, oldHigh, newLow, newHigh) {
+int remap(
+    int value,
+    int oldLow,
+    int oldHigh,
+    int newLow,
+    int newHigh
+) {
     return newLow + (value - oldLow) * (newHigh - newLow) / (oldHigh - oldLow);
 }

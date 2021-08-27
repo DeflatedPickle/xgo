@@ -1,13 +1,13 @@
 #pragma once
 
-#include "util/func/BluetoothStatus.h"
-#include "util/enum/send.h"
+#include "util/enum/BluetoothStatus.h"
+#include "util/func/send.h"
 
 class Bluetooth {
   public:
     Bluetooth();
     
-    /*0x10*/ BluetoothStatus getStatus();
+    /*0x10*/ BluetoothStatus::BluetoothStatus getStatus();
     /*0x11*/ int getBaudRate();
     
     /*0x12*/ int getPassword();
@@ -16,7 +16,5 @@ class Bluetooth {
     }
     
     /*0x13*/ String getName();
-    /*0x13*/ void setName(String name) {
-      send(0x13, name);
-    }
-}
+    /*0x13*/ void setName(String name);
+};

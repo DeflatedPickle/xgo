@@ -1,7 +1,9 @@
 #pragma once
 
-enum Speed {
-  NORMAL,
-  SLOW,
-  FAST,
+namespace Speed {
+  enum Speed {
+    NORMAL,
+    SLOW,
+    FAST,
+  };
 }

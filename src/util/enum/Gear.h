@@ -1,7 +1,8 @@
 #pragma once
 
-namespace Limb {
-    enum Limb {
+namespace Gear {
+    enum Gear {
+        ALL,
         LEFT_FORE,
         RIGHT_FORE,
         RIGHT_REAR,

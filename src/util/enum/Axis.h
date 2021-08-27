@@ -1,7 +1,9 @@
 #pragma once
 
-enum Axis {
-  X,
-  Y,
-  Z,
+namespace Axis {
+  enum Axis {
+    X,
+    Y,
+    Z,
+  };
 }

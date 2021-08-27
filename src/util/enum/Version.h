@@ -1,7 +1,9 @@
 #pragma once
 
-enum Version {
-  MINI,
-  LITE,
-  PRO,
+namespace Version {
+  enum Version {
+    MINI,
+    LITE,
+    PRO,
+  };
 }

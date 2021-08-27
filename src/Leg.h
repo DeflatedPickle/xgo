@@ -5,34 +5,34 @@
 
 class Leg {
 	public:
-		Leg(Limb limb) {
+		Leg(Limb::Limb limb) {
 			switch (limb) {
-				case Limb.LEFT_FORE:
+				case Limb::LEFT_FORE:
 					x = 0x40;
 					y = 0x41;
 					z = 0x42;
-				case Limb.RIGHT_FORE:
+				case Limb::RIGHT_FORE:
 					x = 0x43;
 					y = 0x44;
 					z = 0x45;
-				case Limb.RIGHT_REAR:
+				case Limb::RIGHT_REAR:
 					x = 0x46;
 					y = 0x47;
 					z = 0x48;
-				case Limb.LEFT_REAR:
+				case Limb::LEFT_REAR:
 					x = 0x49;
 					y = 0x4A;
 					z = 0x4B;
 			}
 		}
 
-		void set(Axis axis, int value) {
+		void set(Axis::Axis axis, int value) {
 			switch (axis) {
-				case Axis.X:
+				case Axis::X:
 					send(x, value);
-				case Axis.Y:
+				case Axis::Y:
 					send(y, value);
-				case Axis.Z:
+				case Axis::Z:
 					send(z, value);
 			}
 		}
@@ -40,4 +40,4 @@ class Leg {
 		int x;
 		int y;
 		int z;
-}
+};

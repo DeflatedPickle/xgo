@@ -1,18 +1,18 @@
-#include <Dog>
+#include <Dog.h>
 
-Dog dog = new Dog();
+Dog* dog = new Dog();
 
 void setup() {
-  dog.setup();
+  dog->setup();
 }
 
 void loop() {
-  dog.controller.walk(Axis.X, Direction.FORWARD, 100);
+  dog->controller->walk(Axis::X, 255);
   delay(1);
-  dog.controller.walk(Axis.X, Direction.FORWARD, 0);
+  dog->controller->walk(Axis::X, 0);
   delay(1);
-  dog.controller.walk(Axis.X, Direction.BACKWARD, 100);
+  dog->controller->walk(Axis::X, 255);
   delay(1);
-  dog.controller.walk(Axis.X, Direction.FORWARD, 0);
+  dog->controller->walk(Axis::X, 0);
   delay(1);
 }

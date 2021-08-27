@@ -11,4 +11,4 @@ class Steering {
         void reset() {
             send(0x21, 0x01);
         }
-}
+};

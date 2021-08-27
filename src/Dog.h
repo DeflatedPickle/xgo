@@ -1,7 +1,5 @@
 #pragma once
 
-#include <Serial.h>
-
 #include "Bluetooth.h"
 #include "Steering.h"
 #include "Controller.h"
@@ -15,6 +13,7 @@ class Dog {
     Dog();
     
     void setup() {
+      // if (!Serial.avaliable()) return;
     	Serial.begin(baud_rate);
     	while(!Serial) {
     		;
@@ -30,39 +29,39 @@ class Dog {
       send(0x01);
       return Serial.read();
     }
-    /*0x02*/ Version getVersion() {
+    /*0x02*/ Version::Version getVersion() {
       send(0x02);
       int value = Serial.read();
 
       switch (value) {
         case 0x00:
-          return Version.MINI;
+          return Version::MINI;
         case 0x01:
-          return Version.LITE;
+          return Version::LITE;
         case 0x02:
-          return Version.PRO;
+          return Version::PRO;
         default:
           break;
       }
     }
 
     // Bluetooth information
-    Bluetooth bluetooth = new Bluetooth();
+    Bluetooth* bluetooth = new Bluetooth();
 
     // Test mode
-    Steering steering = new Steering();
+    Steering* steering = new Steering();
 
     // Whole unit mode
-    Controller controller = new Controller();
+    Controller* controller = new Controller();
     
     // Single leg mode
-    Leg left_fore_leg = new Leg(Limb.LEFT_FORE);
-    Leg right_fore_leg = new Leg(Limb.RIGHT_FORE);
-    Leg right_rear_leg = new Leg(Limb.RIGHT_REAR);
-    Leg left_rear_leg = new Leg(Limb.LEFT_REAR);
+    Leg* left_fore_leg = new Leg(Limb::LEFT_FORE);
+    Leg* right_fore_leg = new Leg(Limb::RIGHT_FORE);
+    Leg* right_rear_leg = new Leg(Limb::RIGHT_REAR);
+    Leg* left_rear_leg = new Leg(Limb::LEFT_REAR);
 
   private:
-    int baud_rate = 115200;
+    long baud_rate = 115200;
     int data_bit = 8;
     int stop_bit = 1;
-}
+};

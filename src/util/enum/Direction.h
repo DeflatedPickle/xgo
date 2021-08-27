@@ -1,6 +1,8 @@
 #pragma once
 
-enum Direction {
-    FORWARD,
-    BACKWARD,
+namespace Direction {
+    enum Direction {
+        FORWARD,
+        BACKWARD,
+    };
 }
